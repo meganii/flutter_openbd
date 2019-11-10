@@ -1,4 +1,4 @@
 #import <Flutter/Flutter.h>
 
-@interface FlutterOpenbdPlugin : NSObject<FlutterPlugin>
+@interface FlutterOpenBDPlugin : NSObject<FlutterPlugin>
 @end

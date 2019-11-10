@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftFlutterOpenbdPlugin: NSObject, FlutterPlugin {
+public class SwiftFlutterOpenBDPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "flutter_openbd", binaryMessenger: registrar.messenger())
-    let instance = SwiftFlutterOpenbdPlugin()
+    let instance = SwiftFlutterOpenBDPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

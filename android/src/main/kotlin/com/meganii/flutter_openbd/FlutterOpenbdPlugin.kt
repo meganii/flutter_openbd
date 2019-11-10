@@ -6,12 +6,12 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
-class FlutterOpenbdPlugin: MethodCallHandler {
+class FlutterOpenBDPlugin: MethodCallHandler {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
       val channel = MethodChannel(registrar.messenger(), "flutter_openbd")
-      channel.setMethodCallHandler(FlutterOpenbdPlugin())
+      channel.setMethodCallHandler(FlutterOpenBDPlugin())
     }
   }
 
