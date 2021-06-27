@@ -30,7 +30,8 @@ class FlutterOpenBD {
   FlutterOpenBD();
 
   Future<OpenBD> getISBN(String isbn) async {
-    final response = await http.get('${endpoint}get?isbn=$isbn');
+    var url = Uri.parse('${endpoint}get?isbn=$isbn');
+    final response = await http.get(url);
     OpenBD openbd;
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
