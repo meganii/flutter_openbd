@@ -1,11 +1,10 @@
 name: flutter_openbd
 description: Flutter plugin for openBD.
 version: 0.0.5
-author: meganii
 homepage: https://www.meganii.com/
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.10.0 <3.0.0'
 
 dependencies:
   flutter:
