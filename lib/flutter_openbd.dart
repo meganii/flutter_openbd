@@ -1,3 +1,5 @@
+library flutter_openbd;
+
 import 'dart:async';
 import 'dart:convert';
 
@@ -10,16 +12,21 @@ class OpenBD {
   String cover;
   String author;
 
-  OpenBD({this.isbn, this.title, this.publisher, this.cover, this.author});
+  OpenBD(
+      {required this.isbn,
+      required this.title,
+      required this.publisher,
+      required this.cover,
+      required this.author});
 
   factory OpenBD.fromJson(Map<String, dynamic> json) {
     var summary = json['summary'];
     return OpenBD(
-      isbn: summary['isbn'],
-      title: summary['title'],
-      publisher: summary['summary'],
-      cover: summary['cover'],
-      author: summary['author'],
+      isbn: summary['isbn'] ?? "",
+      title: summary['title'] ?? "",
+      publisher: summary['summary'] ?? "", 
+      cover: summary['cover'] ?? "",
+      author: summary['author'] ?? "",
     );
   }
 }
@@ -32,7 +39,7 @@ class FlutterOpenBD {
   Future<OpenBD> getISBN(String isbn) async {
     var url = Uri.parse('${endpoint}get?isbn=$isbn');
     final response = await http.get(url);
-    OpenBD openbd;
+    var openbd = OpenBD(isbn: "", author: "", cover: "", title: "", publisher: "");
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
       if (data[0] != null) {
