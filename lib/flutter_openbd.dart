@@ -24,7 +24,7 @@ class OpenBD {
     return OpenBD(
       isbn: summary['isbn'] ?? "",
       title: summary['title'] ?? "",
-      publisher: summary['summary'] ?? "", 
+      publisher: summary['publisher'] ?? "",
       cover: summary['cover'] ?? "",
       author: summary['author'] ?? "",
     );
