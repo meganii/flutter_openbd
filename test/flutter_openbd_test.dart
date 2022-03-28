@@ -10,7 +10,7 @@ void main() {
     expect(res.title, 'おにぎりレシピ101');
     expect(res.author, '山田玲子／著 水野菜生／英訳');
     expect(res.cover, 'https://cover.openbd.jp/9784780802047.jpg');
-    expect(res.publisher, '');
+    expect(res.publisher, 'ポット出版');
   });
 
   test('2', () async {
@@ -20,6 +20,6 @@ void main() {
     expect(res.title, 'OKR（オーケーアール）');
     expect(res.author, 'クリスティーナ・ウォドキー／著 二木夢子／翻訳 及川卓也／監修');
     expect(res.cover, 'https://cover.openbd.jp/9784822255640.jpg');
-    expect(res.publisher, '');
+    expect(res.publisher, '日経ＢＰ');
   });
 }
